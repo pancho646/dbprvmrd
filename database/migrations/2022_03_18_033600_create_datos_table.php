@@ -28,6 +28,11 @@ class CreateDatosTable extends Migration
             $table->string('parroquia');
             $table->string('sexo');
             $table->string('direccion');
+            $table->string('telf_hab');
+            $table->string('telf_cel');
+            $table->string('email');
+            $table->string('nivel_ins');
+            $table->string('prof_of');
             $table->timestamps();
         });
     }

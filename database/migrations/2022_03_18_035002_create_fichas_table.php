@@ -16,6 +16,16 @@ class CreateFichasTable extends Migration
         Schema::create('fichas', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->date('fec_ing');
+            $table->string('anio_diag');
+            $table->string('estatus_adm');
+            $table->string('serv_cargo');
+            $table->string('elisa1');
+            $table->string('elisa2');
+            $table->string('wb');
+            $table->unsignedBigInteger('paciente_id')->unique();
+            $table->foreign('paciente_id')->references('id')->on('datos')->onDelete('cascade');
+
         });
     }
 
