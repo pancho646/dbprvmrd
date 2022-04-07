@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\DatosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +24,4 @@ Auth::routes();
 Route::get('login-redirect', [HomeController::class, 'loginRedirect']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/homeadmin', [AdminController::class, 'home'])->middleware('can:homeadmin')->name('homeadmin');
+Route::get('/crearpac',[DatosController::class,'create'])->name('datospac');

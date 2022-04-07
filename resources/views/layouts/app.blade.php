@@ -33,7 +33,7 @@
             @guest
                             
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Inicio</a>
+                    <a class="nav-link link-light" href="{{ url('/') }}">Inicio</a>
                 </li>
 
             @else
@@ -108,7 +108,7 @@
             </div>
         </nav>-->
 
-        <main class="py-4">
+        <main class="py-4 bg-dark">
             @yield('content')
         </main>
     </div>
