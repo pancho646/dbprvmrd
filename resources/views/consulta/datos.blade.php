@@ -2,8 +2,8 @@
 @section('content')
 <div class="container  d-flex justify-content-center align-items-center">
     <div class="card">
-      <h1>Sistema para reigstro de pacientes del Programa de atencion al paciente Vih Mérida</h1>
-      <form class="row g-2 bg-dark text-info">
+      <div class="card-header"> Sistema para reigstro de pacientes del Programa de atencion al paciente Vih Mérida</div>
+      <form method="POST" class="row g-2 bg-dark text-info">
         <div class="col-md-4 px-3">
           <label for="cedula" class="form-label">Cedula</label>
           <input type="number" class="form-control" id="cedula">
