@@ -33,7 +33,12 @@ class DatosController extends Controller
         $datos->email= $request->email;
         $datos->nivel_ins = $request->nivel_ins;
         $datos->prof_of = $request->prof_of;
-        
+        $datos->save();
+        return redirect()->route('sdatos');
 
+    }
+    public function show(){
+        $pacientes=Datos::all();
+        return view('consulta.show',compact('pacientes'));
     }
 }

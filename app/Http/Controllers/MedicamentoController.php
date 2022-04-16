@@ -20,4 +20,9 @@ class MedicamentoController extends Controller
         return redirect()->route('smed');
 
     }
+    public function show(){
+
+        return view('farmacia.show');
+
+    }
 }
