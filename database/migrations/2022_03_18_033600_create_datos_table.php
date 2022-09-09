@@ -22,7 +22,8 @@ class CreateDatosTable extends Migration
             $table->unsignedBigInteger('cedula');
             $table->unsignedBigInteger('historia')->unique();
             $table->string('nacionalidad');
-            $table->date('fechaNac');
+            $table->string('municipio');
+            $table->date('fecha_nac');
             $table->string('ciudad');
             $table->string('estado');
             $table->string('municipio');

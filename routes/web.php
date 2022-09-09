@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DatosController;
-
+use App\Http\Controllers\MedicamentoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,4 +24,9 @@ Auth::routes();
 Route::get('login-redirect', [HomeController::class, 'loginRedirect']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/homeadmin', [AdminController::class, 'home'])->middleware('can:homeadmin')->name('homeadmin');
-Route::resource('consulta', DatosController::class);
+Route::get('/crearpac',[DatosController::class,'create'])->name('datospac');
+Route::post('/crearpac/{id}',[DatosController::class,'store'])->name('gdatos');
+Route::get('verdat',[DatosController::class,'show'])->name('sdatos');
+Route::get('/vermed',[MedicamentoController::class,'show'])->name('smed');
+Route::get('/agregarmed',[MedicamentoController::class,'create'])->name('agmed');
+Route::post('/agregarmed/{id}', [MedicamentoController::class,'create'])->name('gmed');
