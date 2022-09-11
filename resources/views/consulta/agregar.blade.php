@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container text-white">
  <h2>Datos Personales</h2>   
 <form class="row g-3">
   <div class="col-md-3">
@@ -123,7 +123,7 @@
 -->        
     </div>
   </div>
-  <div class="col-12 d-flex justify-content-center">
+  <div class="col-12 d-flex justify-content-center bg-warning py-2">
     <button type="submit" class="btn btn-primary">Registrar paciente</button>
   </div>
 </form>

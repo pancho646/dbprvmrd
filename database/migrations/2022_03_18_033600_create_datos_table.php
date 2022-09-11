@@ -23,7 +23,7 @@ class CreateDatosTable extends Migration
             $table->unsignedBigInteger('historia')->unique();
             $table->string('nacionalidad');
             $table->string('municipio');
-            $table->date('fecha_nac');
+            $table->date('fechaNac');
             $table->string('ciudad');
             $table->string('estado');
             $table->string('municipio');
