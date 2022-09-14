@@ -87,6 +87,8 @@ class DatosController extends Controller
 public function edit($id)
 {
     //
+    $patient=Datos::find($id);
+    return view('consulta.editar',compact('patient'));
 }
 
     public function destroy($id){
